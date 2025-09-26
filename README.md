@@ -25,8 +25,11 @@ venv\Scripts\activate
 # Установка зависимостей
 pip install -r requirements.txt
 
-# Запуск тестов
-pytest tests/ -v
+# Запуск в Firefox
+pytest tests/ --browser=firefox -v
+
+# Запуск в Chrome
+pytest tests/ --browser=chrome -v
 ```
 
 ## Технологии
