@@ -10,7 +10,7 @@ autotests/
 ├── tests/          # Тестовые сценарии
 ├── locators/       # Локаторы элементов
 ├── logs/           # Логи
-├── screenshots     # Скриншоты
+├── screenshots/    # Скриншоты
 ├── conftest.py     # Фикстуры pytest
 └── pytest.ini      # Конфигурация pytest
 ```
