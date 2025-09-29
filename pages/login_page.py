@@ -57,7 +57,7 @@ class LoginPage:
         return self.driver.title
 
     def logout(self):
-        self.logger.info(f"Начинаем логаут пользователя")
+        self.logger.info("Начинаем логаут пользователя")
         self.logger.info("Нажимаем кнопку Menu")
         menu_button = self.driver.find_element(*self.locators.BURGER_MENU_BUTTON)
         menu_button.click()

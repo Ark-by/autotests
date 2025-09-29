@@ -10,11 +10,12 @@ def setup_logger():
     # Настраиваем логирование
     logging.basicConfig(
         level=logging.INFO,
-        format='%(asctime)s - %(message)s',
+        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
         handlers=[
             logging.FileHandler('logs/test.log', encoding='utf-8'),
             logging.StreamHandler()  # Вывод в консоль
-        ]
+        ],
+        force=True
     )
 
     return logging.getLogger('test_logger')
