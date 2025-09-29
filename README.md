@@ -9,6 +9,8 @@ autotests/
 ├── pages/          # Page Objects
 ├── tests/          # Тестовые сценарии
 ├── locators/       # Локаторы элементов
+├── logs/           # Логи
+├── screenshots     # Скриншоты
 ├── conftest.py     # Фикстуры pytest
 └── pytest.ini      # Конфигурация pytest
 ```

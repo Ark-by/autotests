@@ -10,7 +10,7 @@ def setup_logger():
     # Настраиваем логирование
     logging.basicConfig(
         level=logging.INFO,
-        format='%(asctime)s - %(levelname)s - %(message)s',
+        format='%(asctime)s - %(message)s',
         handlers=[
             logging.FileHandler('logs/test.log', encoding='utf-8'),
             logging.StreamHandler()  # Вывод в консоль
