@@ -29,7 +29,7 @@ class LoginPage:
         login_button.click()
 
     def login(self, username, password):
-        self.logger.info(f"Начинаем логин пользователя: {username}")
+        self.logger.info(f"Вводим логин пользователя: {username}")
         self.enter_username(username)
         self.enter_password(password)
         self.click_login_button()
