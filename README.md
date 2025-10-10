@@ -42,6 +42,12 @@ autotests/                          # 🎯 Корневая директория
 ## Установка и запуск
 
 ```bash
+# Клонирование проекта
+git clone https://github.com/Ark-by/autotests.git
+
+# Переход в каталог проекта
+cd autotests
+
 # Создание виртуального окружения
 python -m venv venv
 
@@ -50,7 +56,6 @@ venv\Scripts\activate
 
 # Деактивация (Windows)
 venv\Scripts\deactivate
-или просто deactivate
 
 # Установка зависимостей
 pip install -r requirements.txt
