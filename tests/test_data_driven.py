@@ -14,7 +14,7 @@ class TestDataDrivenLogin:
     """Data-Driven тесты"""
 
 @pytest.fixture
-def test_data(self):
+def test_data():
     return load_test_data()
 
 def test_all_users_from_json(driver, test_data):
