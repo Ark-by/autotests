@@ -30,6 +30,8 @@ venv\Scripts\deactivate
 
 # Установка зависимостей
 pip install -r requirements.txt
+или
+pip install selenium pytest webdriver-manager 
 
 # Запуск в Firefox
 pytest tests/ --browser=firefox -v
