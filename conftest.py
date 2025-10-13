@@ -7,10 +7,13 @@ from selenium.webdriver.firefox.service import Service as FirefoxService
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 
+
+for folder in ['screenshots', 'reports']:
+    if not os.path.exists(folder):
+        os.makedirs(folder)
+
 def take_screenshot(driver, test_name):
     """Функция для создания скриншотов"""
-    if not os.path.exists('screenshots'):
-        os.makedirs('screenshots')
 
     timestamp = datetime.now().strftime("%H%M%S")
     filename = f"screenshots/{test_name}_{timestamp}.png"
