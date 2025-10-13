@@ -13,6 +13,7 @@ def load_test_data():
     with open(file_path, 'r', encoding='utf-8') as file:
         return json.load(file)
 
+@pytest.mark.e2e
 class TestE2EFlow:
     """End-to-End тесты полного цикла покупки"""
 

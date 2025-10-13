@@ -34,3 +34,15 @@ class LoginPage(BasePage):
         if self.is_error_message_displayed():
             return self.get_element_text(self.locators.ERROR_MESSAGE)
         return ""
+    
+    def get_page_title(self):
+        return self.driver.title
+
+    def logout(self):
+        self.logger.info("Начинаем логаут пользователя")
+        self.logger.info("Нажимаем кнопку Menu")
+        menu_button = self.driver.find_element(*self.locators.BURGER_MENU_BUTTON)
+        menu_button.click()
+        self.logger.info("Нажимаем кнопку Logout")
+        logout_link = self.driver.find_element(*self.locators.LOGOUT_LINK)
+        logout_link.click()

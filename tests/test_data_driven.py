@@ -10,6 +10,7 @@ def load_test_data():
     with open(file_path, 'r', encoding='utf-8') as file:
         return json.load(file)
 
+@pytest.mark.data_driven
 class TestDataDrivenLogin:
     """Data-Driven тесты"""
 

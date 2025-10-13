@@ -75,6 +75,9 @@ venv\Scripts\deactivate
 # Установка зависимостей
 pip install -r requirements.txt
 
+#Запуск интерактивного скрипта
+python run_interactive.py
+
 # Запуск в Firefox
 pytest tests/ --browser=firefox
 

@@ -4,6 +4,7 @@ from pages.login_page import LoginPage
 from pages.products_page import ProductsPage
 from pages.cart_page import CartPage
 
+@pytest.mark.cart
 class TestCart:
     """Тесты для корзины"""
 

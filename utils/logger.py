@@ -3,9 +3,6 @@ import os
 
 def setup_logger():
     """Простая настройка логирования"""
-    # Создаем папку для логов
-    if not os.path.exists('logs'):
-        os.makedirs('logs')
 
     # Настраиваем логирование
     logging.basicConfig(

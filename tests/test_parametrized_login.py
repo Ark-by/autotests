@@ -2,6 +2,7 @@ import pytest
 import time
 from pages.login_page import LoginPage
 
+@pytest.mark.login
 class TestParameterizedLogin:
     """Тесты с параметризацией"""
 

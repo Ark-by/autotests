@@ -8,7 +8,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 
 
-for folder in ['screenshots', 'reports']:
+for folder in ['screenshots', 'reports', 'logs']:
     if not os.path.exists(folder):
         os.makedirs(folder)
 

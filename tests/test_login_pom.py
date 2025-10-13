@@ -3,6 +3,7 @@ import time
 from pages.login_page import LoginPage
 from utils.logger import setup_logger
 
+@pytest.mark.login
 class TestLoginPage:
     def setup_method(self):
         self.logger = setup_logger()

@@ -8,7 +8,7 @@ class CheckoutPageLocators:
     CONTINUE_BUTTON = (By.ID, "continue")
     CANCEL_BUTTON = (By.ID, "cancel")
 
-    # Обзор заказа (Step Two) - альтернативные локаторы
+    # Обзор заказа
     CHECKOUT_SUMMARY = (By.CLASS_NAME, "checkout_summary_container")
     ITEM_NAMES = (By.CSS_SELECTOR, ".inventory_item_name")
     ITEM_PRICES = (By.CSS_SELECTOR, ".inventory_item_price")
@@ -17,11 +17,11 @@ class CheckoutPageLocators:
     TAX = (By.CSS_SELECTOR, "summary_tax_label")
     TOTAL = (By.CSS_SELECTOR, "summary_total_label")
 
-    # Кнопки (Step Two)
+    # Кнопки
     FINISH_BUTTON = (By.ID, "finish")
     CANCEL_BUTTON_STEP_TWO = (By.ID, "cancel")
 
-    # Завершение заказа (Step Three)
+    # Завершение заказа
     SUCCESS_MESSAGE = (By.CLASS_NAME, "complete-header")
     BACK_HOME_BUTTON = (By.ID, "back-to-products")
 
