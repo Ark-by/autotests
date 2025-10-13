@@ -8,6 +8,7 @@ from pages.cart_page import CartPage
 class TestProducts:
     """Тесты для страницы товаров"""
 
+    @pytest.mark.products
     def test_product_sorting(self, driver):
         """Тест сортировки товаров"""
         # Логин
@@ -28,6 +29,7 @@ class TestProducts:
             assert len(product_names) > 0, f"Товары не найдены после сортировки {sort_type}"
             print(f"☑ Сортировка {sort_type} работает")
 
+    @pytest.mark.products
     def test_add_multiple_products(self, driver):
         """Упрощенный тест добавления товаров в корзину"""
         login_page = LoginPage(driver)

@@ -17,13 +17,13 @@
             "username": "problem_user",
             "password": "secret_sauce",
             "expected_result": "success",
-            "description": "Пользователь [в проблемами"
+            "description": "Пользователь c проблемами"
         },
         {
             "username": "performance_glitch_user",
             "password": "secret_sauce",
             "expected_result": "success",
-            "description": "Пользователь [в замедлениями"
+            "description": "Пользователь c замедлениями"
         }
     ]
 }

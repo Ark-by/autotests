@@ -5,10 +5,12 @@ from utils.logger import setup_logger
 
 @pytest.mark.login
 class TestLoginPage:
+    @pytest.mark.login
     def setup_method(self):
         self.logger = setup_logger()
         self.logger.info("=" * 50)
 
+    @pytest.mark.login
     def test_successful_login(self, driver):
         self.logger.info("Запуск теста: Успешный логин")
         login_page = LoginPage(driver)
@@ -19,6 +21,7 @@ class TestLoginPage:
         self.logger.info("Тест пройден: Логин успешен")
         time.sleep(2)
 
+    @pytest.mark.login
     def test_invalid_password(self, driver):
         self.logger.info("Запуск теста: Вход с неправильным паролем")
         login_page = LoginPage(driver)
@@ -31,6 +34,7 @@ class TestLoginPage:
         self.logger.info("Тест пройден: Получено сообщение об ошибке")
         time.sleep(2)
 
+    @pytest.mark.login
     def test_locked_out_user(self, driver):
         self.logger.info("Запуск теста: Вход под заблокированным пользователем")
         login_page = LoginPage(driver)
@@ -43,6 +47,7 @@ class TestLoginPage:
         self.logger.info("Тест пройден: Получено сообщение о блокировке")
         time.sleep(2)
 
+    @pytest.mark.login
     def test_empty_credentials(self, driver):
         self.logger.info("Запуск теста: Вход с пустыми полями")
         login_page = LoginPage(driver)
@@ -55,6 +60,7 @@ class TestLoginPage:
         self.logger.info("Тест пройден: Получено сообщение об ошибке")
         time.sleep(2)
 
+    @pytest.mark.login
     def test_successful_logout(self, driver):
         self.logger.info("Запуск теста: Успешиный логаут")
         login_page = LoginPage(driver)
@@ -64,7 +70,8 @@ class TestLoginPage:
         assert "https://autotests.alspio.com/" in driver.current_url
         self.logger.info("Тест пройден: Логаут успешен")
         time.sleep(2)
-    
+
+    @pytest.mark.login    
     def test_failed_login_for_screenshot(self, driver):
         """Тест, который упадет для демонстрации скриншота"""
         self.logger.info("Запуск теста: Демонстрация скриншота при падении")

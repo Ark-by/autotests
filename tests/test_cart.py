@@ -7,7 +7,7 @@ from pages.cart_page import CartPage
 @pytest.mark.cart
 class TestCart:
     """Тесты для корзины"""
-
+    @pytest.mark.cart
     def test_add_and_remove_product_from_cart(self, driver):
         """Тест добавления и удаления товара из корзины"""
         print("☐ Тест: Добавление и удаление товара из корзины")
@@ -47,6 +47,7 @@ class TestCart:
         assert "inventory" in current_url or "products" in current_url
         print("☐ Успешно вернулись к покупкам")
 
+    @pytest.mark.cart
     def test_cart_empty_state(self, driver):
         """Тест пустой корзины"""
         print("☐ Тест: Проверка пустой корзины")
@@ -75,6 +76,7 @@ class TestCart:
         assert "inventory" in current_url or "products" in current_url or "cart" not in current_url
         print("☑ Успешно продолжили покупки из пустой корзины")
 
+    @pytest.mark.cart
     def test_multiple_products_in_cart(self, driver):
         """Тест нескольких товаров в корзине"""
         print("☑ Тест: Несколько товаров в корзине")

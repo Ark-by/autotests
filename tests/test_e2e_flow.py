@@ -21,6 +21,7 @@ class TestE2EFlow:
     def test_data(self):
         return load_test_data()
 
+    @pytest.mark.e2e
     def test_complete_purchase_flow(self, driver, test_data):
         """Полный цикл покупки от логина до подтверждения заказа (упрощенная версия)"""
         print("☐ Начало E2E теста: Полный цикл покупки")
@@ -96,7 +97,7 @@ class TestE2EFlow:
             print("X Заказ не завершен успешно")
             # Тест все равно считается пройденным, так как основные шаги работают
             print("A Тест завершен с предупреждением")
-
+    @pytest.mark.e2e
     def test_empty_cart_checkout(self, driver):
         """Тест попытки оформления заказа с пустой корзиной"""
         print("G Тест: Оформление заказа с пустой корзиной")

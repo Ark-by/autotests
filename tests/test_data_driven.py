@@ -18,6 +18,7 @@ class TestDataDrivenLogin:
 def test_data():
     return load_test_data()
 
+@pytest.mark.data_driven
 def test_all_users_from_json(driver, test_data):
     """Тест всех пользователей из JSON файла"""
     users = test_data['users']

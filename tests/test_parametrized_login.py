@@ -11,6 +11,7 @@ class TestParameterizedLogin:
     ("locked_out_user", "secret_sauce", "error"),
     ("problem_user", "secret_sauce", "success")
 ])
+@pytest.mark.login
 def test_login_with_different_users(driver, username, password, expected_result):
     """Тест логина разными пользователями"""
     print(f"  > Тестируем пользователя: {username}")
@@ -33,6 +34,7 @@ def test_login_with_different_users(driver, username, password, expected_result)
     ("", "secret_sauce", "Username is required"),
     ("standard_user", "", "Password is required")
 ])
+@pytest.mark.login
 def test_invalid_credentials(driver, username, password, expected_error):
     """Тест невалидных credentials"""
     print(f"🔴 Тестируем невалидные данные: '{username}' / '{password}'")
